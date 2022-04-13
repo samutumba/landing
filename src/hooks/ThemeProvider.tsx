@@ -1,5 +1,6 @@
 import React, {useContext, useState, createContext} from 'react'
 import { useEffect } from 'react';
+import { IconContext } from 'react-icons';
 export const ThemeContext = createContext("light")
 
 function defaultFunc(): void{}
@@ -37,10 +38,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({children}) => {
       }
 
   return (
-    <ThemeContext.Provider value={ theme }>
-        <ThemeUpdateContext.Provider value = {toggleTheme}>
-            { children }
-        </ThemeUpdateContext.Provider> 
+    <ThemeContext.Provider value={theme}>
+      <ThemeUpdateContext.Provider value={toggleTheme}>
+        <IconContext.Provider value={{ className: "inline-block" }}>
+          {children}
+        </IconContext.Provider>
+      </ThemeUpdateContext.Provider>
     </ThemeContext.Provider>
-  )
+  );
 }

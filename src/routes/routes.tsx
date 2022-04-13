@@ -18,7 +18,7 @@ export const WebRoutes = () => {
                 <Route path={"/projects"} element={<Projects />} />              
                 <Route path={"/resume"} element={<Resume />} />
                 <Route path={"/services"} element={<Services />} />
-                <Route element={<NotFound />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
         </>  

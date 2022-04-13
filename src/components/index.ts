@@ -5,4 +5,4 @@ export * from "./DevIcon";
 export * from './Toggle';
 export * from "./Body";
 export * from "./Project";
-
+export * from "./ToolTip";

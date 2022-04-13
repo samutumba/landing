@@ -14,7 +14,7 @@ export const myProjects: ManyProjectsType = [
             url: "https://samutumba.com",
         },
         language: [Language.Type, Tool.React, Tool.Tailwind, Tool.NodeJS, Tool.Express],
-        environment: [DevEnvironments.VSCode],
+        environment: [DevEnvironments.VSCode, DevEnvironments.Netlify],
     },
     {
         title: "Crazy Eights Card Game",

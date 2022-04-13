@@ -1,5 +1,6 @@
 import React from "react"
 import { useTheme, useToggle } from "../../hooks";
+import { BsBrightnessHighFill, BsMoonFill } from "react-icons/bs";
 
 export const Toggle = () => {
 
@@ -20,7 +21,7 @@ export const Toggle = () => {
 
   return (
     <button id="theme-toggle" type="button" className=" focus:outline-none focus:ring-4  rounded-full text-m">
-        { isDark()? <i className="bi bi-brightness-high text-gold dark:text-sun  hover:text-gold" onClick={ changeTheme}></i> :  <i className="bi bi-moon dark:hover:text-gold text-gold dark:text-sun" onClick={ changeTheme }></i> }
+        { isDark()? <div className="text-gold dark:text-sun  hover:text-gold" onClick={ changeTheme}> <BsBrightnessHighFill/> </div> :  <div className="dark:hover:text-gold text-gold dark:text-sun" onClick={ changeTheme }><BsMoonFill /></div> }
     </button>
   )
 }

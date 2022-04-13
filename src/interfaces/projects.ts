@@ -30,7 +30,7 @@ export type StackType = Language | Tool;
 
 /**Programming Language */
 export enum Language {
-    JS = 'JS',
+    JS = 'JavaScript',
     Java = 'Java',
     CPP = 'C++',
     CS = 'C#',
@@ -65,19 +65,19 @@ export enum FileType {
 /**Frameworks and Plugins */
 export enum Tool {
     NodeJS = "NodeJs",
-    Angular = "Angular",
+    Angular = "AngularJs",
     JQ = "JQuery",
-    React = "ReactJS",
+    React = "ReactJs",
     Ajax = "AJAX",
-    BootStrap = "Bootstrap CSS",
-    Tailwind = "Tailwind CSS",
+    BootStrap = "Bootstrap",
+    Tailwind = "Tailwind",
     Express = "Express",
-    dotNet = ".Net",
+    dotNet = "dotNet",
     dotNetCore = ".Net Core",
     Laravel = "Laravel",
-    Ruby = "Ruby on Rails",
+    Ruby = "Ruby",
     Spring = "Spring",
-    NextJS = "NextJS",
+    NextJS = "NextJs",
     GraphQL = "GraphQL",
     
 }
@@ -88,14 +88,16 @@ export enum DevEnvironments {
     VSEnt = 'Visual Studio Enterprise',
     Atom = 'Atom',
     Linux = "Linux",
-    Apache = "Apache NetBeans",
+    Apache = "Apache",
     PgSQL = "PostGreSQL",
     MySQL = "MySQL",
-    SQLServer = "Microsoft SQL Server",
+    SQLServer = "SQL Server",
     NotePad = "NotePad++",
     PyCharm = "PyCharm Edu",
     CodePen = "CodePen",
-    MongoDB = "MongoDB"
+    MongoDB = "MongoDB",
+    Netlify = "Netlify",
+    Heroku = "Heroku"
 
 }
 

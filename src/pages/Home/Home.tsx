@@ -1,5 +1,7 @@
+import React  from "react";
 import {Body, DevIcon, Footer, NavBar }  from "../../components";
 import { StackType, DevEnvironments, Language, Tool } from "../../interfaces";
+import { BsQuestionCircleFill } from "react-icons/bs";
 
 const proficient: StackType[] = [
     Language.JS,
@@ -72,7 +74,7 @@ export const Home = () => {
           <div className="container mx-auto md:p-0 overflow-hidden h-auto">
             <div className="px-6 py-0 md:px-12 h-auto text-center lg:text-left">
               <div className="container mx-auto xl:px-32 h-auto">
-                <div className="grid lg:grid-cols-2 items-center h-auto ">
+                <div className="grid lg:grid-cols-2 items-center h-auto select-none">
                   <div className="lg:mt-0 space-x-5 h-auto">
                     <h1 className="text-center lg:text-right text-5xl dark:text-white text-dark-blue font-title md:text-8xl xl:text-9xl font-bold tracking-tight mb-7">
                       Samuel J.K
@@ -94,7 +96,7 @@ export const Home = () => {
         </Header>
         <div className="block container mt-3 mx-auto ">
           <div className="px-6 py-3 md:px-12 text-gray-800  text-center lg:text-left">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 select-none">
               <div>
                 <h1 className="text-5xl font-bold font-title dark:text-sun text-gold">
                   Software Developer <br />
@@ -187,12 +189,13 @@ const ExperienceDisplay: React.FC<IExperienceProps> = ({
     stack
 }) => {
     return (
-        <div className="inline-block bg-transparent md:justify-center content-center w-full md:w-1/4 h-full px-2 pb-4 ">
+        <div className="inline-block font-title bg-transparent md:justify-center content-center w-full md:w-1/4 h-full px-2 pb-4 ">
             <div className="flex flex-col justify-center m-auto h-full w-full">
                 <div className="inline-grid grid-cols-3 gap-x-6 gap-y-4 w-10/12">
                     {stack.map ((tech, key) => 
-                        <div key={key} className="h-auto w-25 sm:my-1 md:px-0" >
+                        <div key={key} className="flex flex-col flex-wrap content-center text-center h-auto w-25 sm:my-1 md:px-0" >
                             <DevIcon stack={tech} />
+                            {tech}
                         </div>
                     )}
                 </div>
@@ -212,19 +215,25 @@ const EnvironmentDisplay: React.FC<IEnvironmentProps> = ({
     environment,
 }) => {
     return (
-        <div className="block w-full h-auto dark:text-white text-dark-blue text-2xl place-content-center">
-            <div className="flex flex-row justify-center flex-wrap space-x-6 pt-4 w-full h-full text-center">
-                { environment.map ((env, i) => 
-                    <div key={i} className="inline-block h-auto">
-                        <DevIcon stack={env} />
-                    </div> )
-                }
+      <div className="block w-full h-auto dark:text-white text-dark-blue text-2xl place-content-center">
+        <div className="flex flex-row justify-center flex-wrap space-x-6 pt-4 w-full h-full text-center">
+          {environment.map((env, i) => (
+            <div
+              key={i}
+              className="flex flex-col text-lg text-center h-auto"
+            >
+              <DevIcon stack={env} />
+              {env}
             </div>
-            <div className="block w-full h-auto">            
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-title text-center pt-4 dark:text-sun text-gold">My Development Environments</h5>
-            </div>
+          ))}
         </div>
-    )
+        <div className="block w-full h-auto">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-title text-center pt-4 dark:text-sun text-gold">
+            My Development Environments
+          </h5>
+        </div>
+      </div>
+    );
 }
 
 type questionAndAnswer = {
@@ -238,24 +247,55 @@ interface IQandAProps {
 
 const QandA: React.FC<IQandAProps> = ({section}) => {
     return (
-        <>
-        <div id="accordion-open" data-accordion="open" className="md:w-4/5 mx-auto">
-            {section.map ((sec, i) => <>
-            <h2 id={"accordion-color-heading-"+i}>
-            <button type="button" className="flex justify-between items-center p-5 w-full font-medium text-left  border border-b-0 border-gray-200 dark:focus:text-midnight-blue focus:text-white dark:focus:ring-sun dark:focus:bg-sun focus:ring-gold focus:bg-gold focus:ring-4   dark:border-gray-700 " data-accordion-target={"#accordion-color-body-"+i} aria-expanded="true" aria-controls={"accordion-color-body-"+i}>
-              <span className="font-bold font-title "><i className="bi bi-patch-question-fill"></i>  {sec.question}</span>
-              <svg data-accordion-icon className="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-          </h2>
-          <div id={"accordion-color-body-"+i} className="hidden" aria-labelledby={"accordion-color-heading-"+i}>
-            <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 ">
-              <p className="mb-2 text-left dark:text-iron text-dark-blue font-p text-m ">{sec.answer}</p>
-            </div>
-          </div></>
-            )}
+      <>
+        <div
+          id="accordion-open"
+          data-accordion="open"
+          className="md:w-4/5 mx-auto"
+        >
+          {section.map((sec, i) => (
+            <React.Fragment key={i}>
+              <h2 id={"accordion-color-heading-" + i}>
+                <button
+                  type="button"
+                  className="flex justify-between items-center p-5 w-full font-medium text-left  border border-b-0 border-gray-200 dark:focus:text-midnight-blue focus:text-white dark:focus:ring-sun dark:focus:bg-sun focus:ring-gold focus:bg-gold focus:ring-4   dark:border-gray-700 "
+                  data-accordion-target={"#accordion-color-body-" + i}
+                  aria-expanded="true"
+                  aria-controls={"accordion-color-body-" + i}
+                >
+                  <span className="font-bold font-title ">
+                    <BsQuestionCircleFill /> {sec.question}
+                  </span>
+                  <svg
+                    data-accordion-icon
+                    className="w-6 h-6 rotate-180 shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+              </h2>
+              <div
+                id={"accordion-color-body-" + i}
+                className="hidden"
+                aria-labelledby={"accordion-color-heading-" + i}
+              >
+                <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 ">
+                  <p className="mb-2 text-left dark:text-iron text-dark-blue font-p text-m ">
+                    {sec.answer}
+                  </p>
+                </div>
+              </div>
+            </React.Fragment>
+          ))}
         </div>
-           
-        </>
-    )
+      </>
+    );
 }
  
