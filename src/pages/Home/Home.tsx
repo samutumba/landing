@@ -76,7 +76,7 @@ export const Home = () => {
               <div className="container mx-auto xl:px-32 h-auto">
                 <div className="grid lg:grid-cols-2 items-center h-auto select-none">
                   <div className="lg:mt-0 space-x-5 h-auto">
-                    <h1 className="text-center lg:text-right text-5xl dark:text-white text-dark-blue font-title md:text-8xl xl:text-9xl font-bold tracking-tight mb-7">
+                    <h1 className="text-center mt-5 lg:mt-0 lg:text-right text-6xl dark:text-white text-dark-blue font-title md:text-8xl xl:text-9xl font-bold tracking-tight mb-3 md:mb-7">
                       Samuel J.K
                       <br />
                       <span className="pt-2 md:text-9xl">Mutumba</span>
@@ -191,7 +191,7 @@ const ExperienceDisplay: React.FC<IExperienceProps> = ({
     return (
         <div className="inline-block font-title bg-transparent md:justify-center content-center w-full md:w-1/4 h-full px-2 pb-4 ">
             <div className="flex flex-col justify-center m-auto h-full w-full">
-                <div className="inline-grid grid-cols-3 gap-x-6 gap-y-4 w-10/12">
+                <div className="inline-grid grid-cols-3 place-content-center gap-x-6 gap-y-4 w-10/12">
                     {stack.map ((tech, key) => 
                         <div key={key} className="flex flex-col flex-wrap content-center text-center h-auto w-25 sm:my-1 md:px-0" >
                             <DevIcon stack={tech} />

@@ -3,7 +3,7 @@ import { DevIcon } from "..";
 import { MyProjects, ProjectType, SingleProject } from "../../interfaces";
 import { AiFillApi, AiFillGithub, AiFillFileZip } from "react-icons/ai";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
+import { IoMdClose, IoMdWarning } from "react-icons/io";
 
 export const Project: FC<MyProjects> = ({ projects }) => {
   return (
@@ -130,7 +130,8 @@ const ProjectModal: FC<IndividualProjectProps> = ({p , i}) => {
                           </button>
                         </div>
                         <div className="p-6 pt-0 text-center">
-                          <i className="bi bi-exclamation-diamond-fill text-black dark:text-red-500 text-5xl mb-3"></i>
+                          
+                          <IoMdWarning className="text-black dark:text-red-500 text-5xl mb-3" />
                           <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
                             Are you sure you want to download this project file?
                           </h3>

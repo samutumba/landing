@@ -200,7 +200,7 @@ export const Resume = () => {
                     <DevIcon stack={Tool.React} size="5xl" /> React
                   </div>
                   <div className="p-2">
-                    <DevIcon stack={DevEnvironments.MySQL} size="5xl" /> SQL
+                    <DevIcon stack={Language.SQL} size="5xl" /> SQL
                   </div>
                   <div className="p-2">
                     <DevIcon stack={Language.Java} size="5xl" /> Java
