@@ -6,39 +6,39 @@ import {
     SiGnubash,
     SiJava,
     SiJavascript,
-  SiCplusplus,
-  SiCsharp,
-  SiCss3,
-  SiAngular,
-  SiDotnet,
-  SiExpress,
-  SiJquery,
-  SiHeroku,
-  SiHtml5,
-  SiMongodb,
-  SiNetlify,
-  SiNextdotjs,
-  SiXaml,
-  SiSpring,
-  SiTailwindcss,
-  SiTypescript,
-  SiPhp,
-  SiPython,
-  SiNodedotjs,
-  SiReact,
-  SiBootstrap,
-  SiLaravel,
-  SiRuby,
-  SiAtom,
-  SiVisualstudiocode,
-  SiVisualstudio,
-  SiLinux,
-  SiPostgresql,
-  SiMicrosoftsqlserver,
-  SiPycharm,
-  SiCodepen,
-  SiGraphql,
-  SiApache,
+    SiCplusplus,
+    SiCsharp,
+    SiCss3,
+    SiAngular,
+    SiDotnet,
+    SiExpress,
+    SiJquery,
+    SiHeroku,
+    SiHtml5,
+    SiMongodb,
+    SiNetlify,
+    SiNextdotjs,
+    SiXaml,
+    SiSpring,
+    SiTailwindcss,
+    SiTypescript,
+    SiPhp,
+    SiPython,
+    SiNodedotjs,
+    SiReact,
+    SiBootstrap,
+    SiLaravel,
+    SiRuby,
+    SiAtom,
+    SiVisualstudiocode,
+    SiVisualstudio,
+    SiLinux,
+    SiPostgresql,
+    SiMicrosoftsqlserver,
+    SiPycharm,
+    SiCodepen,
+    SiGraphql,
+    SiApache,
 } from "react-icons/si";
 
 interface DevIconProps {
@@ -52,14 +52,13 @@ export const DevIcon: React.FC<DevIconProps> = ({
     size
 }) => {
 
-    let sizeSet:boolean = false;
+    let sizeSet:boolean = true;
 
 
-    if (size !== undefined){
-        sizeSet = true;
+    if (size === undefined ){
+        sizeSet = false;
     }
    
-
     return (
         <div className={"dark:text-white text-gray-900 text-center align-middle " + (sizeSet? " text-"+size+"": " text-6xl") }>
             <SetIcon icon={stack} />

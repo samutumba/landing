@@ -10,6 +10,7 @@ export interface ProjectInterface {
         url?: string,
         file?: string,
     }
+    gallery?: string[],
     language: StackType[];
     environment: DevEnvironments[];
     apis?: APIs[];

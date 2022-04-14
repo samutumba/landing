@@ -9,7 +9,7 @@ const proficient: StackType[] = [
     Language.CSS,
     Language.CS,
     Language.HTML,
-    Tool.BootStrap,
+    Language.SQL,
 ]
 
 const semiProficient: StackType[] = [

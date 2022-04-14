@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Body, DevIcon, Footer, NavBar }  from "../../components";
 import { DurhamCollegeIcon, MedAtlasIcon, ReservoirGator, githubUrl, linkedInUrl, mailUrl } from "../../constants";
-import { DevEnvironments, Language, Tool } from "../../interfaces";
+import { Language, Tool } from "../../interfaces";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import {BiFootball } from "react-icons/bi";
 import {GiOldMicrophone } from "react-icons/gi";

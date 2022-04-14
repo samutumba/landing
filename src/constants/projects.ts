@@ -1,5 +1,5 @@
 import { DevEnvironments, Language, ManyProjectsType, ProjectType, Tool } from "../interfaces"
-import { CardsPic, PortfolioPic } from "./images"
+import { CardsPic, YellowLogo } from "./images"
 
 export const completedProjects: string = ""
 
@@ -7,11 +7,12 @@ export const completedProjects: string = ""
 export const myProjects: ManyProjectsType = [
     {
         title: "Personal Website",
-        coverImage: PortfolioPic,
+        coverImage: YellowLogo,
         type: ProjectType.Ind,
         description: `To put a face to my skills as a Web Developer I designed and built this site for my portfolio to kickstart the gallery of my personal work. \n This site is built using a React & Tailwind front-end and a back end of NodeJS and Express all written in Typescript. `,
         links: {
             url: "https://samutumba.com",
+            github : "https://github.com/samutumba/landing",
         },
         language: [Language.Type, Tool.React, Tool.Tailwind, Tool.NodeJS, Tool.Express],
         environment: [DevEnvironments.VSCode, DevEnvironments.Netlify],
