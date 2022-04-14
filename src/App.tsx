@@ -2,19 +2,20 @@ import React from 'react';
 import './App.css';
 import { ThemeProvider } from './hooks';
 import { WebRoutes } from './routes';
-
+import {HelmetProvider} from "react-helmet-async";
 
 function App() {
 
   return (  
     <>
       <ThemeProvider>
-          <div className='App dark:bg-bottom-blue bg-tint-blue'>
+          <HelmetProvider>
+            <div className='App dark:bg-bottom-blue bg-tint-blue'>
             <WebRoutes /> 
-          </div>
+            </div>
+          </HelmetProvider>
       </ThemeProvider>
     </>
-      
   );
 }
 

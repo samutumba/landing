@@ -14,11 +14,17 @@ import {
   BsLinkedin,
   BsSpotify,
 } from "react-icons/bs";
+import { Helmet } from "react-helmet-async";
 
 
 export const Resume = () => {
   return (
     <div>
+       <Helmet>
+        <title>Resume - Samutumba</title>
+        <meta name="description" content="A Software Developer, driven to shape the web from his keyboard, shares his profile through resume" />
+        <link rel="canonical" href="/resume" />      
+      </Helmet>
       <Body>
         <NavBar link="Resume" />
         <div className="flex flex-row justify-center  text-midnight-blue font-title mt-9 dark:text-white font-bold md:text-5xl text-3xl ">

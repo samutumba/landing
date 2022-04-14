@@ -2,6 +2,7 @@ import React  from "react";
 import {Body, DevIcon, Footer, NavBar }  from "../../components";
 import { StackType, DevEnvironments, Language, Tool } from "../../interfaces";
 import { BsQuestionCircleFill } from "react-icons/bs";
+import { Helmet } from "react-helmet-async";
 
 const proficient: StackType[] = [
     Language.JS,
@@ -68,6 +69,11 @@ const qAndA:questionAndAnswer[] = [
 export const Home = () => {
   return (
     <div className="flex flex-col flex-wrap">
+      <Helmet>
+        <title>Home - Samutumba</title>
+        <meta name="description" content="Find out a little bit more about Samuel J Kayongo Mutumba" />
+        <link rel="canonical" href="/" />      
+      </Helmet>
       <Body>
         <NavBar link="Home" />
         <Header>
