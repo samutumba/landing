@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Body, DevIcon, Footer, NavBar }  from "../../components";
-import { DurhamCollegeIcon, MedAtlasIcon, ReservoirGator, githubUrl, linkedInUrl, mailUrl } from "../../constants";
+import { DurhamCollegeIcon, MedAtlasIcon, ReservoirGator, githubUrl, linkedInUrl, mailUrl, RealtyShop } from "../../constants";
 import { Language, Tool } from "../../interfaces";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import {BiFootball } from "react-icons/bi";
@@ -102,8 +102,28 @@ export const Resume = () => {
                   Professional Experience
                 </h3>
                 <Experience
+                  link="https://realtyshop.ca/"
+                  title="Associate Software Developer"
+                  place="RealtyShop.ca"
+                  start="April 2023"
+                  location="Toronto, ON"
+                  image={RealtyShop}
+                >
+                  <ul className="p-2 list-disc list-outside text-left">
+                    <li>
+                      RealtyShop.ca is an e-commerce platform geared towards providing expeditied services to realtors and landlords in the Greater Toronto Area (GTA)
+                    </li>
+                    <li>
+                      Developed Test Cases to check the functionality of custom website pages at scale
+                    </li>
+                    <li>
+                      I undertake the development of webpages to drive the ecommerce platform
+                    </li>
+                  </ul>
+                </Experience>
+                <Experience
                   link="https://medatlas.com/"
-                  title="Software Developer Intern"
+                  title="Technical Co-Founder & Software Developer"
                   place="MedAtlas"
                   start="July 2021"
                   location="Waterloo, ON"
@@ -131,6 +151,36 @@ export const Resume = () => {
                     <li>
                       Currently, I work upon developing new features for the
                       site
+                    </li>
+                  </ul>
+                </Experience>
+                <Experience
+                  link="https://www.mumzcareandkidsstore.com/"
+                  title="Full Stack Developer"
+                  place="Mumz Care And Kids Store"
+                  start="May 2022"
+                  end="November 2022"
+                  location="Kampala, UG (Remote)"
+                  image={"https://www.mumzcareandkidsstore.com/favicon.ico"}
+                >
+                  <ul className="p-2 list-disc list-outside text-left">
+                    <li>
+                      Delivered performance-driven and user-centric website that
+                      met all business requirements.
+                    </li>
+                    <li>
+                      Developed a structured database system to accommodate sales both onsite and online.
+                    </li>
+                    <li>
+                      Developed a functional e-commerce platform for families to
+                      purchase and track orders.
+                    </li>
+                    <li>
+                      Collaborated with store staff to develop an admin dashboard to
+                      manage store assets, generate reports, invoices, and receipts,
+                      conduct business, and communicate with customers online.
+                      Along with a complete staff management system using Zoho
+                      Workspace.
                     </li>
                   </ul>
                 </Experience>

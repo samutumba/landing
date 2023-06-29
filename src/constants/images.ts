@@ -7,3 +7,4 @@ export const PortfolioPic:string = "https://i.postimg.cc/J432bYQ5/Portfolio-Resu
 export const CardsPic:string = "https://i.postimg.cc/VvWWbpcS/pexels-erik-mclean-6152927.jpg";
 export const TrafficStop:string = "https://i.postimg.cc/j5D0r0qf/pexels-davis-sanchez-2652968.jpg";
 export const StaticTelevision:string = "https://i.postimg.cc/Jh6Vg48m/pexels-burak-kebapci-704555.jpg";
+export const RealtyShop: string = "https://i.postimg.cc/gkdHnL7v/Realty-Shop-Logo.png"

@@ -1,7 +1,7 @@
 import React, {useContext, useState, createContext} from 'react'
 import { useEffect } from 'react';
 import { IconContext } from 'react-icons';
-export const ThemeContext = createContext("light")
+export const ThemeContext = createContext("dark")
 
 function defaultFunc(): void{}
 export const ThemeUpdateContext = createContext(defaultFunc)

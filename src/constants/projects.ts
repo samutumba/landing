@@ -28,5 +28,17 @@ export const myProjects: ManyProjectsType = [
         language: [Language.CS, Tool.dotNetCore, Language.XAML],
         environment: [DevEnvironments.VSEnt],
     },
+    {
+        title: "Canada National Soccer Association",
+        coverImage: "https://cnsa.samutumba.com/_next/image?url=%2FSoccerlogo.png&w=828&q=75",
+        type: ProjectType.Group,
+        description: `Assignment for Database Development II in Durham College's Computer Programming and Analysis Program. Durham College This is a proposed system for record keeping and scouting to improve the infrastructure of Canadian Soccer within the University and High School leagues `,
+        links: {
+            url: "https://cnsa.samutumba.com",
+            github: "https://github.com/samutumba/canada-national-soccer-association"
+        },
+        language: [Language.Type, Tool.NextJS, Language.SQL,],
+        environment: [DevEnvironments.VSCode],
+    },
     
 ]
